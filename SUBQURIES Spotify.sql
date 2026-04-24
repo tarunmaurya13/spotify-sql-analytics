@@ -2,7 +2,7 @@ USE tarun;
 
 
 
--- Q1 Find Every track whose popularity beats the 
+--  Find Every track whose popularity beats the 
 -- dataset average , and show the track name , 
 -- artist,how far above it is.
 
@@ -21,7 +21,7 @@ WHERE track_popularity > (
 )
 ORDER BY above_avg DESC;
 
--- Q2 Find artists whose avg track popularity beats 
+--  Find artists whose avg track popularity beats 
 -- the dataset average but whose followers are 
 -- below average - the underdogs.
 
@@ -38,7 +38,7 @@ FROM spotify)
 
 ORDER BY Track_pop DESC;
 
--- Q3 Find all tracks that belong to album 
+--  Find all tracks that belong to album 
 -- larger than the average album size.
 
 SELECT 
@@ -63,7 +63,7 @@ WHERE album_name IN (
 
 ORDER BY album_total_tracks DESC, album_name;
 
--- Q4 Find each artist most popular track by 
+--  Find each artist most popular track by 
 -- comparing each rows to its own artist's max 
 -- popularity
 
@@ -79,7 +79,7 @@ WHERE track_popularity = (
          )
 ORDER BY track_popularity DESC; 
 
--- Q5 Flag every track whose popularity falls below
+--  Flag every track whose popularity falls below
 -- the average of its own album.
 
 SELECT s1.track_name,
@@ -99,7 +99,7 @@ WHERE s1.track_popularity < (
 )
 ORDER BY s1.track_popularity ASC;        
 
--- Q6  Subquery in From calculates avg popularity ,
+--   Subquery in From calculates avg popularity ,
 -- outer query assign tier labels using CASE WHEN 
 
 SELECT 
@@ -120,7 +120,7 @@ FROM (
   ) AS artist_stats
 ORDER BY avg_popularity DESC;  
      
---Q7  Show each artist's avg popularity next to the 
+--  Show each artist's avg popularity next to the 
 -- overall dataset average and the gap between them.
 
 SELECT artist_name,
