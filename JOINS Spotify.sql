@@ -5,7 +5,7 @@
 
 USE tarun;
 
--- Q1  Tracks from artists who 
+--   Tracks from artists who 
 -- have BOTH albums AND singles
 
 -- t1 = 'Full tracklist'
@@ -29,7 +29,7 @@ WHERE album_type = 'single'
 )t3 ON t1.artist_name = t3.artist_name
 ORDER BY total_pop DESC;
 
--- Q2  Dominant artists: consistently popular AND well-followed
+--   Dominant artists: consistently popular AND well-followed
 
 SELECT 
     artist_name,
@@ -71,7 +71,7 @@ HAVING SUM(CASE WHEN t1.track_popularity = 0
             THEN 1 ELSE 0 END)>= 1
 ORDER BY zero_pop DESC;  
 
--- Q4   
+--    
 
 SELECT 
     t1.album_type                         AS album_type_1,
@@ -94,6 +94,7 @@ CROSS JOIN (
     FROM spotify
     GROUP BY album_type
 ) t2
+
 -- Remove mirror pairs (album vs album)
 -- and duplicate pairs (A vs B = B vs A)
 WHERE t1.album_type < t2.album_type
