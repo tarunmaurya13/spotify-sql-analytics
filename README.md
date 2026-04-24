@@ -1,8 +1,7 @@
 # 🎧 Spotify Data Analytics using SQL
 
-> A portfolio-grade SQL project that analyzes Spotify’s music catalog using real-world business scenarios — covering everything from basic aggregates to advanced window functions.
-
----
+> A production-style SQL analytics project that explores Spotify’s music catalog through real-world business questions — demonstrating data-driven decision making using aggregates, joins, subqueries, and advanced window functions.
+> ---
 
 ## ⚡ Quick Insights (Sample Findings)
 
