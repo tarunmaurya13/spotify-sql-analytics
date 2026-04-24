@@ -120,7 +120,7 @@ FROM (
   ) AS artist_stats
 ORDER BY avg_popularity DESC;  
      
--- Show each artist's avg popularity next to the 
+--Q7  Show each artist's avg popularity next to the 
 -- overall dataset average and the gap between them.
 
 SELECT artist_name,
